@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/tabler.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/hero-style.css">
+
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check2" viewBox="0 0 16 16">
+                <path
+                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+            </symbol>
+            <symbol id="circle-half" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+                <path
+                    d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+            </symbol>
+        </svg>
+
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme"
+                type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                    <use href="#circle-half"></use>
+                </svg>
+                <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                        aria-pressed="false">
+                        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                            <use href="#sun-fill"></use>
+                        </svg>
+                        Light
+                        <svg class="bi ms-auto d-none" width="1em" height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                        aria-pressed="false">
+                        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                            <use href="#moon-stars-fill"></use>
+                        </svg>
+                        Dark
+                        <svg class="bi ms-auto d-none" width="1em" height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active"
+                        data-bs-theme-value="auto" aria-pressed="true">
+                        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                            <use href="#circle-half"></use>
+                        </svg>
+                        Auto
+                        <svg class="bi ms-auto d-none" width="1em" height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- topbar -->
+        <div class="topbar">
+            <div class="container-xl d-flex justify-content-between">
+                <div class="nav">
+                    <a class="nav-link disabled">
+                        <span class="pe-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                </path>
+                                <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                <path d="M15 3a6 6 0 0 1 6 6"></path>
+                            </svg>
+                        </span>
+                        +8801712345678
+                    </a>
+
+                    <a class="nav-link disabled">
+                        <span class="pe-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                                <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
+                            </svg>
+                        </span>
+                        info@domain.com
+                    </a>
+                </div>
+
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 20l4 -9"></path>
+                                <path
+                                    d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7">
+                                </path>
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary static-top">
+            <div class="container-xl">
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href=".">
+                        <img src="./static/logo.svg" width="110" height="32" alt="Logo" class="navbar-brand-image">
+                    </a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                        <form action="./" method="get" autocomplete="off" novalidate>
+                            <div class="input-icon">
+                                <span class="input-icon-addon">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                        <path d="M21 21l-6 -6" />
+                                    </svg>
+                                </span>
+                                <input type="text" value="" class="form-control" placeholder="Search…"
+                                    aria-label="Search in website">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- hero -->
+        <section class="hero">
+            <div class="container-xl">
+                <div class="hero-inner">
+                    <div class="hero-copy">
+                        <h1 class="hero-title display-4 mt-0">Popular International.</h1>
+                        <p class="hero-paragraph">Popular International Agency & Popular International Express Ltd. Is
+                            Government Authorised Customs Clearing and Forwarding Agent in All Ports Of Bangladesh and
+                            We Are Importer and We Support Expoter To Export Goods By Our Own Export License.We have
+                            Warehouse In Dhaka With Own Transport.</p>
+                        <div class="hero-cta"><a class="button button-primary" href="#" target="_blank">Contact</a>
+                            <!-- <div id="player" class="mt-32">
+                          <span class="player-info">Move the slider to control the animation or <a id="run-trigger" href="#0">restart</a></span>
+                          <input class="progress" step=".001" type="range" min="0" max="100" value="0">
+                        </div> -->
+                        </div>
+                    </div>
+                    <div class="hero-figure anime-element">
+
+                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="hover" class=""
+                            colors="primary:#121331,secondary:#08a88a" style="width:528px;height:396px">
+                        </lord-icon>
+
+                        <div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+                        <div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+                        <div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+                        <div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+                        <div class="hero-figure-box hero-figure-box-05"></div>
+                        <div class="hero-figure-box hero-figure-box-06"></div>
+                        <div class="hero-figure-box hero-figure-box-07"></div>
+                        <div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+                        <div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+                        <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- hero -->
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <!-- Services -->
+                <div class="bg-body-tertiary">
+                    <div class="container col-xxl-8 px-4 py-5 ">
+                        <!-- title -->
+                        <h2 class="title-section text-center">
+                            <span class="title">Our Services</span>
+                            <span class="title-bg">Services</span>
+                        </h2>
+
+                        <!--  -->
+                        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                            <!-- Services title -->
+                            <div class="col d-flex flex-column align-items-start gap-2">
+                                <h3 class="fw-bold">Popular International Agency & Popular International Express Ltd.
+                                </h3>
+                                <p class="text-body-secondary">is the best Clearing and forwarding agents in Bangladesh.
+                                    We are leading clearing agents in Bangladesh. Also we are custom service provider in
+                                    Bangladesh. We provide services in airport, seaport and land ports, custom clearance
+                                    & logistic services</p>
+                                <a href="#" class="btn btn-outline-primary btn-lg">Services</a>
+                            </div>
+
+                            <div class="col services">
+                                <div class="row row-cols-1 row-cols-sm-2 g-4">
+                                    <div class="col d-flex align-items-start">
+                                        <div class="card">
+                                            <div class="card-stamp">
+                                                <div class="card-stamp-icon bg-primary">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-ship" width="24" height="24"
+                                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path
+                                                            d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1">
+                                                        </path>
+                                                        <path d="M4 18l-1 -5h18l-2 4"></path>
+                                                        <path d="M5 13v-6h8l4 6"></path>
+                                                        <path d="M7 7v-4h-1"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title"><a href="">Sea Transport</a></h3>
+                                                <p class="text-muted">You can benefit from the finest overall pricing
+                                                    with others. We are capable to provide multiple sailing schedules
+                                                    per week on customer's demand.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col d-flex align-items-start">
+                                        <div class="card">
+                                            <div class="card-stamp">
+                                                <div class="card-stamp-icon bg-primary">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-plane-tilt" width="24"
+                                                        height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path
+                                                            d="M14.5 6.5l3 -2.9a2.05 2.05 0 0 1 2.9 2.9l-2.9 3l2.5 7.5l-2.5 2.55l-3.5 -6.55l-3 3v3l-2 2l-1.5 -4.5l-4.5 -1.5l2 -2h3l3 -3l-6.5 -3.5l2.5 -2.5l7.5 2.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title"><a href="">Air Transport</a></h3>
+                                                <p class="text-muted">We use the world's leading airlines to provide
+                                                    international freight services in hundreds of trade lanes.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col d-flex align-items-start">
+
+                                        <div class="card">
+                                            <div class="card-stamp">
+                                                <div class="card-stamp-icon bg-primary">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-truck-delivery" width="24"
+                                                        height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                        <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5">
+                                                        </path>
+                                                        <path d="M3 9l4 0"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title"><a href="">Road Transport</a></h3>
+                                                <p class="text-muted">We are in a place to present our clients a
+                                                    wide-ranging network of container transport / trucking & land
+                                                    transportation service covering all of inland point of Bangladesh.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col d-flex align-items-start">
+                                        <div class="card">
+                                            <div class="card-stamp">
+                                                <div class="card-stamp-icon bg-primary">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-building-warehouse"
+                                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M3 21v-13l9 -4l9 4v13"></path>
+                                                        <path d="M13 13h4v8h-10v-6h6"></path>
+                                                        <path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title"><a href="#">Warehousing & Distribution</a></h3>
+                                                <p class="text-muted">We are able to give a complete series of services,
+                                                    ranging from receiving of goods, cargo consolidation,
+                                                    de-consolidation, pick and pack, inventory control to order
+                                                    assembly.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="bg-body-tertiary">
+                    <div class="container col-xxl-8 px-4 py-5 ">
+                        <!-- title -->
+                        <h2 class="title-section text-center">
+                            <span class="title">OUR COMPANY</span>
+                            <span class="title-bg">About</span>
+                        </h2>
+                        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                            <div class="col-10 col-sm-8 col-lg-6">
+                                <img src="./avada-movers-homeherobackground-final.jpg"
+                                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+                                    loading="lazy">
+                            </div>
+                            <div class="col-lg-6">
+                                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero
+                                    with image</h1>
+                                <p class="lead">Quickly design and customize responsive mobile-first sites with
+                                    Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass
+                                    variables and mixins, responsive grid system, extensive prebuilt components, and
+                                    powerful JavaScript plugins.</p>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">About
+                                        us</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- WHY CHOOSE US -->
+                <div class="bg-body-tertiary">
+                    <div class="container col-xxl-8 px-4 py-5 ">
+                        <!-- title -->
+                        <h2 class="title-section text-center">
+                            <span class="title">WHY CHOOSE US</span>
+                            <span class="title-bg">About</span>
+                        </h2>
+
+                        <div class="text-center">
+                            <h3 class="fw-bold">Modern approach & sustainable results</h3>
+                            <p class="text-body-secondary">is the best Clearing and forwarding agents in Bangladesh. We
+                                are leading clearing agents in Bangladesh. Also we are custom service provider in
+                                Bangladesh. We provide services in airport, seaport and land ports, custom clearance &
+                                logistic services</p>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 choose">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4 text-center">
+                                        <span
+                                            class="avatar avatar-lg"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-calendar-bolt" width="24"
+                                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                    d="M13.5 21h-7.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5">
+                                                </path>
+                                                <path d="M16 3v4"></path>
+                                                <path d="M8 3v4"></path>
+                                                <path d="M4 11h16"></path>
+                                                <path d="M19 16l-2 3h4l-2 3"></path>
+                                            </svg>
+                                        </span>
+                                        <h3 class="m-0 mb-1">12 years of experience</h3>
+                                        <div class="text-muted">Because diversity lorem ipsum dolor porta ullam rutrum
+                                            glavrida lorem unicus amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4 text-center">
+                                        <span
+                                            class="avatar avatar-lg"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-users-group" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                                <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+                                                <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                                <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+                                                <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                                <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+                                            </svg> -->
+
+                                            <lord-icon src="https://cdn.lordicon.com/zpxybbhl.json" trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:250px;height:250px">
+                                            </lord-icon>
+                                        </span>
+                                        <h3 class="m-0 mb-1">Best industry experts</h3>
+                                        <div class="text-muted">Because diversity lorem ipsum dolor porta ullam rutrum
+                                            glavrida lorem unicus amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4 text-center">
+                                        <span
+                                            class="avatar avatar-lg"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-headset" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M4 14v-3a8 8 0 1 1 16 0v3"></path>
+                                                <path d="M18 19c0 1.657 -2.686 3 -6 3"></path>
+                                                <path
+                                                    d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z">
+                                                </path>
+                                                <path
+                                                    d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z">
+                                                </path>
+                                            </svg> -->
+
+                                            <lord-icon src="https://cdn.lordicon.com/hciqteio.json" trigger="hover"
+                                                colors="primary:#121331,secondary:#08a789"
+                                                style="width:250px;height:250px">
+                                            </lord-icon>
+                                        </span>
+                                        <h3 class="m-0 mb-1">24/7 Customer support</h3>
+                                        <div class="text-muted">Because diversity lorem ipsum dolor porta ullam rutrum
+                                            glavrida lorem unicus amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4 text-center">
+                                        <span
+                                            class="avatar avatar-lg"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-calendar-bolt" width="24"
+                                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                    d="M13.5 21h-7.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5">
+                                                </path>
+                                                <path d="M16 3v4"></path>
+                                                <path d="M8 3v4"></path>
+                                                <path d="M4 11h16"></path>
+                                                <path d="M19 16l-2 3h4l-2 3"></path>
+                                            </svg>
+                                        </span>
+                                        <h3 class="m-0 mb-1">12 years of experience</h3>
+                                        <div class="text-muted">Because diversity lorem ipsum dolor porta ullam rutrum
+                                            glavrida lorem unicus amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- WHY CHOOSE US -->
+                <div class="bg-body-tertiary">
+                    <div class="container col-xxl-8 px-4 py-5 ">
+                        <!-- title -->
+                        <h2 class="title-section text-center">
+                            <span class="title">Gallery</span>
+                            <span class="title-bg">Gallery</span>
+                        </h2>
+
+                        <div class="text-center">
+                            <h3 class="fw-bold">Modern approach & sustainable results</h3>
+                            <p class="text-body-secondary">is the best Clearing and forwarding agents in Bangladesh. We
+                                are leading clearing agents in Bangladesh. Also we are custom service provider in
+                                Bangladesh. We provide services in airport, seaport and land ports, custom clearance &
+                                logistic services</p>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                            <div class="col">
+                                <div class="card border-0">
+                                    <div class="img-responsive img-responsive-1x1 rounded-4 card-img-top"
+                                        style="background-image: url(https://tabler.io/samples/photos/a-woman-works-on-a-laptop-at-home.jpg)">
+                                    </div>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card border-0">
+                                    <div class="img-responsive img-responsive-1x1 rounded-4 card-img-top"
+                                        style="background-image: url(https://tabler.io/samples/photos/a-woman-works-on-a-laptop-at-home.jpg)">
+                                    </div>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card border-0">
+                                    <div class="img-responsive img-responsive-1x1 rounded-4 card-img-top"
+                                        style="background-image: url(https://tabler.io/samples/photos/a-woman-works-on-a-laptop-at-home.jpg)">
+                                    </div>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- footer -->
+                <footer class="footer-section bg-body-tertiary border-top">
+                    <div class="container">
+                        <div class="footer-cta pt-5 pb-5">
+                            <div class="row">
+                                <div class="col-xl-4 col-md-4 mb-30">
+                                    <div class="single-cta">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div class="cta-text">
+                                            <h4>Find us</h4>
+                                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-4 mb-30">
+                                    <div class="single-cta">
+                                        <i class="fas fa-phone"></i>
+                                        <div class="cta-text">
+                                            <h4>Call us</h4>
+                                            <span>9876543210 0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-4 mb-30">
+                                    <div class="single-cta">
+                                        <i class="far fa-envelope-open"></i>
+                                        <div class="cta-text">
+                                            <h4>Mail us</h4>
+                                            <span>mail@info.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-content pt-5 pb-5">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 mb-50">
+                                    <div class="footer-widget">
+                                        <div class="footer-logo">
+                                            <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
+                                        </div>
+                                        <div class="footer-text">
+                                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                                            elit,Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                        <div class="footer-social-icon">
+                                            <span>Follow us</span>
+                                            <a href="#"><i class="fab fa-facebook-f bg-facebook"></i></a>
+                                            <a href="#"><i class="fab fa-twitter bg-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-google-plus-g bg-google"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                                    <div class="footer-widget">
+                                        <div class="footer-widget-heading">
+                                            <h3>Useful Links</h3>
+                                        </div>
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">about</a></li>
+                                            <li><a href="#">services</a></li>
+                                            <li><a href="#">portfolio</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Our Services</a></li>
+                                            <li><a href="#">Expert Team</a></li>
+                                            <li><a href="#">Contact us</a></li>
+                                            <li><a href="#">Latest News</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                                    <div class="footer-widget">
+                                        <div class="footer-widget-heading">
+                                            <h3>Subscribe</h3>
+                                        </div>
+                                        <div class="footer-text mb-25">
+                                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                        </div>
+                                        <div class="subscribe-form">
+                                            <form action="#">
+                                                <input type="text" placeholder="Email Address">
+                                                <button><i class="fab fa-telegram-plane"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-area">
+                        <div class="container-xl">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="copyright-text">
+                                        <p>Copyright &copy; 2018, All Right Reserved <a href="">RH Suman</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-end">
+                                    <div class="footer-menu">
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Terms</a></li>
+                                            <li><a href="#">Privacy</a></li>
+                                            <li><a href="#">Policy</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Cookie -->
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="./js/tabler.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -302,3 +302,8 @@ input.progress[value]::-webkit-slider-thumb {
 .bd-mode-toggle {
   z-index: 999;
 }
+
+img.earth {
+  position: absolute;
+  max-width: 600px;
+}
